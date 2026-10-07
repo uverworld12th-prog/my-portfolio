@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HABITO／ハビトは架空のパーソナルジムの提案名称です。初心者向けのサイトとThreads運用提案をまとめた自主制作の事例です。">
+<meta name="theme-color" content="#244ee5">
+<title>HABITO / ハビト — 小さくはじめる、わたしのペースで。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cobalt:#244ee5;--ice:#edf5ff;--blue-line:#b5c9ed;--graphite:#232c39;--muted:#53647a;--white:#fff;--line:#d3deec;--display:'Barlow Condensed',Impact,sans-serif;--body:'Noto Sans JP',sans-serif;--max:1200px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:118px}body{margin:0;color:var(--graphite);background:var(--ice);font-family:var(--body);font-size:15px;line-height:1.9;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}a{color:inherit;text-underline-offset:5px}button,a{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:wait}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--cobalt);outline-offset:5px}button{line-height:1.5}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.5}h2{font-size:clamp(25px,3.2vw,40px);letter-spacing:-.055em;font-weight:800}h3{font-size:20px;letter-spacing:-.03em}p+p{margin-top:16px}[hidden]{display:none!important}svg{display:block;max-width:100%}.wrap{width:min(var(--max),calc(100% - 96px));margin:auto}.skip{position:fixed;left:16px;top:-100px;padding:12px 20px;background:var(--white);z-index:100}.skip:focus{top:12px}.notice{background:var(--graphite);color:var(--white);text-align:center;padding:9px 24px;font-size:11px;letter-spacing:.055em}.site-header{background:var(--ice);position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line)}.header-inner{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;gap:12px;align-items:center;text-decoration:none}.brand-name{font:800 38px/1 var(--display);letter-spacing:-.03em}.brand-sub{font-size:10px;line-height:1.6;border-left:1px solid var(--blue-line);padding-left:12px;white-space:nowrap}.switch{display:flex;padding:4px;border:1px solid var(--blue-line);border-radius:40px;gap:4px}.switch button{border:0;border-radius:30px;background:transparent;color:var(--muted);padding:11px 20px;font-size:12px;font-weight:700;white-space:nowrap}.switch button[aria-pressed=true]{background:var(--cobalt);color:white}.site-nav{display:flex;align-items:center;gap:26px}.site-nav a{font-size:12px;text-decoration:none}.site-nav a:hover{text-decoration:underline}.button{display:inline-flex;align-items:center;justify-content:center;gap:24px;background:var(--cobalt);color:var(--white);border:1px solid var(--cobalt);text-decoration:none;padding:17px 24px;min-height:54px;border-radius:4px;font-weight:700;font-size:13px}.button .arrow{font-size:20px;line-height:1}.button:hover{background:var(--graphite);border-color:var(--graphite)}.button.outline{background:transparent;color:var(--cobalt)}.button.outline:hover{background:var(--white)}.eyebrow{color:var(--cobalt);font-size:11px;font-weight:700;letter-spacing:.14em;margin-bottom:22px;display:flex;gap:12px;align-items:center}.eyebrow:before{content:'';width:24px;height:2px;background:var(--cobalt)}.hero{position:relative;overflow:hidden;padding:76px 0 56px;min-height:700px}.hero-top{display:grid;grid-template-columns:1.08fr 1fr;gap:30px;position:relative;z-index:2}.hero h1{font-size:clamp(39px,4.5vw,65px);font-weight:800;letter-spacing:-.065em;line-height:1.5}.hero h1 em{font-style:normal;color:var(--cobalt)}.hero-copy{max-width:430px;margin:25px 0 30px;font-size:14px;line-height:2.1}.micro{font-size:11px;color:var(--muted);line-height:1.8}.hero .micro{margin-top:13px}.hero-art{position:relative;min-height:340px}.trajectory{position:absolute;inset:5px 0 auto;width:100%;height:310px}.trajectory .route{fill:none;stroke:var(--blue-line);stroke-width:2;stroke-dasharray:5 7}.trajectory .footprint{fill:var(--cobalt)}.trajectory .moving-step{offset-path:path('M 45 255 C 145 250 65 150 190 155 S 280 250 335 165 S 365 100 475 38');offset-rotate:0deg;animation:small-step 12s ease-in-out infinite}.trajectory text{font-family:var(--body);font-size:12px;fill:var(--muted)}@keyframes small-step{0%,12%{offset-distance:0%}75%,100%{offset-distance:100%}}.art-note{position:absolute;bottom:8px;right:18px;color:var(--cobalt);font-size:12px;writing-mode:vertical-rl;letter-spacing:.2em}.outline-word{position:relative;font:800 clamp(145px,23vw,320px)/.82 var(--display);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.5px var(--cobalt);margin:34px 0 0;text-align:center;user-select:none}.hero-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:32px;font-size:11px;color:var(--muted)}.hero-bottom a{text-decoration:none}.section{padding:92px 0}.section.white{background:var(--white)}.section-head{display:flex;justify-content:space-between;gap:32px;align-items:flex-start;margin-bottom:46px}.section-head>p{max-width:385px;font-size:13px;color:var(--muted);padding-top:38px}.concept-tag{display:inline-block;color:var(--muted);border:1px solid var(--line);font-size:10px;padding:3px 10px;border-radius:20px;margin-top:17px}.service-list{border-top:1px solid var(--line)}.service-row{display:grid;grid-template-columns:95px 1fr 1.05fr;gap:28px;align-items:center;padding:32px 0;border-bottom:1px solid var(--line)}.service-marker{width:60px;height:60px;border:1px solid var(--blue-line);border-radius:50%;display:flex;align-items:center;justify-content:center}.service-marker svg{width:30px;height:30px;fill:none;stroke:var(--cobalt);stroke-width:1.7}.service-row h3 span{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:9px;letter-spacing:0}.service-row p{font-size:13px;color:var(--muted)}.principle{margin-top:35px;display:flex;gap:15px;font-size:12px;color:var(--muted)}.principle strong{color:var(--cobalt);white-space:nowrap}.process{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px}.process li{padding-top:22px;border-top:2px solid var(--blue-line)}.step-no{font:700 60px/1 var(--display);color:var(--cobalt);margin-bottom:20px}.process h3{font-size:19px;margin-bottom:14px}.process p{font-size:13px;color:var(--muted)}.process .caption{display:block;color:var(--cobalt);font-size:11px;margin-top:20px}.faq-grid{display:grid;grid-template-columns:.85fr 1.3fr;gap:100px}.faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line)}summary{cursor:pointer;padding:23px 38px 23px 0;list-style:none;position:relative;font-size:14px;font-weight:600}summary::-webkit-details-marker{display:none}summary:after{content:'＋';position:absolute;right:3px;color:var(--cobalt);font-size:20px;top:19px}details[open] summary:after{content:'−'}details p{font-size:13px;color:var(--muted);padding:0 20px 23px 0}.demo-section{padding:75px 0 85px}.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}.demo-title{margin-bottom:24px}.demo-caption{color:var(--muted);font-size:13px;max-width:390px}.demo-form{background:var(--white);padding:30px;border:1px solid var(--blue-line)}fieldset{border:0;padding:0;margin:0 0 24px}legend{font-size:14px;font-weight:700;margin-bottom:18px}.goal-choice{display:flex;align-items:center;gap:12px;margin:0 0 10px;min-height:46px;padding:10px 12px;background:var(--ice);border:1px solid var(--line);font-size:13px;cursor:pointer}.goal-choice:has(input:checked){border-color:var(--cobalt);color:var(--cobalt)}input[type=radio]{accent-color:var(--cobalt);width:17px;height:17px;flex-shrink:0}.demo-form .button{width:100%}.demo-form .micro{margin-top:12px}.demo-output{margin-top:20px;font-size:13px;border-left:3px solid var(--cobalt);padding:0 0 0 16px;line-height:1.9}.demo-output strong{color:var(--cobalt)}.noscript{padding:16px;background:var(--white);border:1px solid var(--line);font-size:12px;margin:16px auto;max-width:var(--max)}.proposal-hero{padding:70px 0 65px;border-bottom:1px solid var(--blue-line);position:relative;overflow:hidden}.proposal-hero .wrap{position:relative;z-index:1}.proposal-heading{display:grid;grid-template-columns:1.4fr .85fr;gap:70px;align-items:end}.proposal-heading h1{font-size:clamp(31px,4.2vw,53px);letter-spacing:-.055em;line-height:1.6}.proposal-heading h1 span{color:var(--cobalt)}.proposal-heading p{font-size:13px;color:var(--muted)}.case-strip{display:flex;gap:32px;flex-wrap:wrap;border-top:1px solid var(--blue-line);margin-top:40px;padding-top:22px;font-size:11px;color:var(--muted)}.case-strip strong{color:var(--graphite)}.strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;border-top:1px solid var(--line)}.strategy-item{padding:28px 0;border-bottom:1px solid var(--line)}.strategy-item h3{font-size:14px;color:var(--cobalt);margin-bottom:12px}.strategy-item p{font-size:13px;color:var(--muted)}.pillars{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pillars span{border:1px solid var(--blue-line);padding:5px 10px;font-size:11px;border-radius:20px;color:var(--cobalt)}.flow-map{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:18px;align-items:center;margin-top:36px;background:var(--ice);padding:27px}.flow-map strong{font-size:14px;display:block;margin-bottom:6px}.flow-map p{font-size:11px;color:var(--muted)}.flow-arrow{color:var(--cobalt)}.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:32px 0 16px}.filters button{border:1px solid var(--blue-line);background:transparent;color:var(--muted);font-size:12px;min-height:42px;padding:9px 17px;border-radius:30px}.filters button[aria-pressed=true]{color:var(--white);background:var(--cobalt);border-color:var(--cobalt)}.filters .reset{margin-left:auto;border-radius:4px}.post-count{font-size:11px;color:var(--muted);margin-bottom:26px}.post-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}.post{padding:30px 0;border-top:1px solid var(--blue-line);min-width:0}.post-head{display:flex;align-items:center;gap:12px;margin-bottom:19px}.post-number{font:700 34px/1 var(--display);color:var(--cobalt)}.purpose{font-size:10px;background:var(--white);color:var(--cobalt);border:1px solid var(--blue-line);padding:4px 10px;border-radius:20px}.post h3{font-size:14px;font-weight:700;flex:1}.post-text{font-size:14px;line-height:2;white-space:pre-line;overflow-wrap:anywhere}.post-notes{margin-top:20px;font-size:11px;color:var(--muted);padding-top:15px;border-top:1px solid var(--line)}.post-notes a{color:var(--cobalt)}.post-bottom{margin-top:15px;display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:10px;color:var(--muted)}.copy-button{border:1px solid var(--blue-line);background:transparent;color:var(--cobalt);padding:9px 14px;min-height:40px;font-size:11px;border-radius:4px}.copy-button:hover{background:var(--white)}.copy-status{min-height:24px;font-size:12px;color:var(--cobalt);margin-top:14px}.manual-copy{padding:20px;background:var(--white);border:1px solid var(--blue-line);margin-top:15px}.manual-copy label{font-size:12px;font-weight:700;display:block;margin-bottom:10px}.manual-copy textarea{width:100%;height:200px;padding:14px;border:1px solid var(--line);color:var(--graphite);font-size:13px;line-height:1.8;resize:vertical}.manual-copy button{margin-top:10px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.day{min-height:155px;padding:17px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.day-label{font-size:11px;color:var(--muted);display:block;margin-bottom:15px}.day strong{display:block;font-size:12px;line-height:1.6}.day a{display:inline-block;color:var(--cobalt);font:700 27px/1 var(--display);text-decoration:none;margin-bottom:13px}.day p{font-size:10px;color:var(--muted);margin-top:10px;line-height:1.7}.day.rest{background:var(--ice)}.day.rest .day-label{color:var(--cobalt)}.calendar-note{font-size:12px;color:var(--muted);margin-top:24px}.metrics{width:100%;border-collapse:collapse;font-size:12px;line-height:1.9}th,td{text-align:left;vertical-align:top;padding:20px 22px 20px 0;border-bottom:1px solid var(--blue-line)}th{font-size:11px;color:var(--muted);font-weight:500}td:first-child{font-weight:700;width:20%;color:var(--cobalt)}.metrics-note{margin-top:24px;max-width:850px;font-size:12px;color:var(--muted)}.closing{background:var(--cobalt);color:white;padding:44px 0}.closing .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px}.closing h2{font-size:24px}.closing p{font-size:12px;margin-top:10px;opacity:.9}.closing a{color:white;font-size:12px;white-space:nowrap}.site-footer{padding:34px 0 28px;border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:24px}.footer-brand{font:700 28px/1 var(--display);color:var(--cobalt)}.site-footer .micro{margin-top:18px;max-width:780px;font-size:10px}.footer-credit{font-size:11px}.back-link{font-size:11px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.js-only{display:none}.js-ready .js-only{display:inline-flex}.js-ready .filters.js-only{display:flex}
+@media(min-width:1500px){.hero{min-height:790px}.outline-word{font-size:330px}}
+@media(max-width:1050px){.wrap{width:calc(100% - 64px)}.site-nav{display:none}.hero{min-height:630px;padding-top:60px}.hero h1{font-size:43px}.hero-art{min-height:310px}.faq-grid{gap:50px}.demo-grid{gap:45px}.proposal-heading{gap:40px}.calendar{grid-template-columns:repeat(7,minmax(0,1fr))}.day{padding:14px 10px}.day strong{font-size:11px}}
+@media(max-width:700px){html{scroll-padding-top:135px}.wrap{width:calc(100% - 40px)}body{font-size:14px}.notice{font-size:9px;line-height:1.8;padding:7px 20px}.header-inner{min-height:111px;padding:12px 0;flex-wrap:wrap;gap:11px}.brand-name{font-size:31px}.brand-sub{font-size:9px}.switch{width:100%;order:3;justify-content:center;padding:3px}.switch button{flex:1;padding:9px 10px;font-size:11px}.hero{padding:38px 0 35px;min-height:0}.hero-top{display:block}.eyebrow{font-size:10px;margin-bottom:18px}.hero h1{font-size:clamp(33px,9.3vw,48px);line-height:1.6}.hero-copy{font-size:12px;line-height:2;margin:21px 0 24px;max-width:330px}.hero .button{padding:15px 20px;font-size:12px;gap:28px}.hero-art{height:182px;min-height:0;margin-top:23px}.trajectory{height:185px;top:0;width:100%}.art-note{bottom:0;right:0;font-size:10px}.outline-word{font-size:25.7vw;margin-top:18px;-webkit-text-stroke:1px var(--cobalt)}.hero-bottom{font-size:9px;margin-top:21px}.section{padding:58px 0}h2{font-size:27px}.section-head{display:block;margin-bottom:30px}.section-head>p{padding-top:20px;font-size:12px;max-width:100%}.service-row{grid-template-columns:43px 1fr;gap:16px;padding:24px 0;align-items:start}.service-marker{width:40px;height:40px}.service-marker svg{width:23px;height:23px}.service-row h3{font-size:17px}.service-row h3 span{font-size:10px;margin-top:5px}.service-row p{grid-column:2;font-size:12px;margin-top:-5px}.principle{display:block;font-size:11px}.principle strong{display:block;margin-bottom:8px}.process{grid-template-columns:1fr;gap:27px}.process li{display:grid;grid-template-columns:55px 1fr;gap:0 15px;padding-top:21px}.step-no{font-size:44px;grid-row:span 3;margin-bottom:0}.process h3{font-size:17px;margin-bottom:9px}.process p{font-size:12px}.process .caption{margin-top:12px;font-size:10px}.faq-grid,.demo-grid{grid-template-columns:1fr;gap:30px}.faq-list summary{font-size:12px}.faq-list details p{font-size:12px}.demo-section{padding:55px 0}.demo-caption{font-size:12px}.demo-form{padding:22px 18px}.goal-choice{font-size:12px}.demo-form .micro{font-size:10px}.demo-output{font-size:12px}.proposal-hero{padding:40px 0}.proposal-heading{grid-template-columns:1fr;gap:22px}.proposal-heading h1{font-size:30px}.proposal-heading p{font-size:12px}.case-strip{gap:10px 20px;font-size:10px;margin-top:25px;padding-top:18px}.strategy-grid{grid-template-columns:1fr;gap:0}.strategy-item{padding:23px 0}.strategy-item p{font-size:12px}.flow-map{grid-template-columns:1fr;padding:22px;gap:15px}.flow-arrow{transform:rotate(90deg);width:20px}.filters{gap:7px;margin-top:24px}.filters button{font-size:11px;padding:9px 13px;min-height:40px}.filters .reset{margin-left:0}.post-list{grid-template-columns:1fr;gap:0}.post{padding:25px 0}.post h3{font-size:13px}.post-head{gap:9px;margin-bottom:16px}.post-number{font-size:30px}.purpose{font-size:9px;padding:3px 8px}.post-text{font-size:13px;line-height:2}.post-notes{font-size:10px}.calendar{grid-template-columns:repeat(2,minmax(0,1fr))}.day{min-height:144px;padding:17px}.day strong{font-size:12px}.day p{font-size:10px}.day:nth-child(7){border-bottom:2px solid var(--blue-line)}.calendar-note{font-size:11px}.metrics thead{display:none}.metrics tr{display:block;border-bottom:1px solid var(--blue-line);padding:16px 0}.metrics td{display:block;border:0;padding:6px 0;font-size:12px}.metrics td:first-child{width:auto}.metrics td[data-label]:before{content:attr(data-label) '：';font-size:10px;color:var(--muted);display:block}.metrics-note{font-size:11px}.closing{padding:33px 0}.closing .wrap{display:block}.closing h2{font-size:22px}.closing p{font-size:11px}.closing a{display:inline-block;margin-top:22px;font-size:11px}.footer-row{flex-wrap:wrap;gap:16px}.footer-credit{font-size:10px}.back-link{width:100%;font-size:10px}.site-footer .micro{font-size:9px}.noscript{margin:12px 20px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.trajectory .moving-step{offset-distance:35%}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<div class="notice">自主制作の架空サイトです。HABITO／ハビトは提案名称であり、実在の店舗・サービスの案内ではありません。</div>
+<header class="site-header">
+ <div class="wrap header-inner">
+  <a class="brand" href="#site-top" data-panel-link="site-panel" aria-label="HABITO サイトの先頭へ"><span class="brand-name">HABITO<span aria-hidden="true">.</span></span><span class="brand-sub">ハビト<br>架空のパーソナルジム</span></a>
+  <nav class="site-nav" aria-label="サイト内案内"><a href="#services" data-panel-link="site-panel">できること</a><a href="#first-visit" data-panel-link="site-panel">はじめての方へ</a><a href="#consultation" data-panel-link="site-panel">相談デモ ↗</a></nav>
+  <div class="switch" role="group" aria-label="表示内容の切り替え">
+   <button type="button" id="show-site" aria-controls="site-panel" aria-pressed="true">サイトを見る</button>
+   <button type="button" id="show-proposal" aria-controls="proposal-panel" aria-pressed="false">運用提案を見る</button>
+  </div>
+ </div>
+</header>
+<noscript><p class="noscript">このページでは、サイトと運用提案を続けて表示しています。相談の要約・表示切り替え・絞り込み・コピーには、スクリプトの有効化が必要です。投稿本文はそのまま選択してコピーできます。</p></noscript>
+<main id="main">
+<section id="site-panel" aria-label="架空のジムサイト">
+ <section class="hero" id="site-top" aria-labelledby="hero-title">
+  <div class="wrap">
+   <div class="hero-top">
+    <div>
+     <p class="eyebrow">はじめる前の、ためらいから。</p>
+     <h1 id="hero-title">いきなり頑張る、<br>じゃなくて。<br><em>小さく、はじめる。</em></h1>
+     <p class="hero-copy">ジムは気になる。でも、ついていけるか不安。<br>そんな気持ちを、置いていかない場所へ。<br>わたしのペースを一緒に考える、ハビトです。</p>
+     <a class="button" href="#consultation">相談の流れを試す <span class="arrow" aria-hidden="true">↗</span></a>
+     <p class="micro">相談デモです。予約・問い合わせは送信されません。</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+     <svg class="trajectory" viewBox="0 0 520 310" xmlns="http://www.w3.org/2000/svg">
+      <path class="route" d="M45 255 C145 250 65 150 190 155 S280 250 335 165 S365 100 475 38"/>
+      <circle cx="45" cy="255" r="6" fill="#edf5ff" stroke="#244ee5" stroke-width="2"/>
+      <circle cx="475" cy="38" r="8" fill="#edf5ff" stroke="#244ee5" stroke-width="2"/>
+      <text x="25" y="292">気になる</text><text x="164" y="124">話してみる</text><text x="310" y="205">試してみる</text><text x="392" y="19">自分のペースへ</text>
+      <g class="moving-step"><rect class="footprint" x="-7" y="-16" width="14" height="24" rx="7" transform="rotate(-20)"/><rect class="footprint" x="12" y="-3" width="14" height="24" rx="7" transform="rotate(15)"/></g>
+     </svg>
+     <p class="art-note">まっすぐじゃなくても、いい。</p>
+    </div>
+   </div>
+   <div class="outline-word" aria-hidden="true">HABITO</div>
+   <div class="hero-bottom"><span>習慣の、ひとつ手前から。</span><a href="#services">できることを知る ↓</a></div>
+  </div>
+ </section>
+ <section class="section white" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+   <div class="section-head"><div><p class="eyebrow">ハビトで、できること</p><h2 id="services-title">「できるかな？」を、<br>一緒にほどく。</h2><span class="concept-tag">架空のサービス設計案</span></div><p>運動への不安、生活の都合、やってみたいこと。<br>まずは言葉にするところから。こちらは、初心者に向けたサービスの構想です。</p></div>
+   <div class="service-list">
+    <div class="service-row"><div class="service-marker" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 6h22v15H15l-7 6v-6H5z"/><path d="M10 12h12M10 16h8"/></svg></div><h3>話すところから。<span>はじめての相談</span></h3><p>「何から始めたらいい？」でも大丈夫。気になることと希望を整理し、相談や体験の内容を確認する想定です。</p></div>
+    <div class="service-row"><div class="service-marker" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 12v8M9 8v16M23 8v16M27 12v8M9 16h14"/></svg></div><h3>わからないままにしない。<span>対話しながらの運動体験</span></h3><p>動き方や道具について説明を受けながら試す構想です。内容や負荷は、希望や状態を確認したうえで検討します。</p></div>
+    <div class="service-row"><div class="service-marker" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 26h22M7 26v-6h6v-6h6V8h6"/><circle cx="25" cy="6" r="2"/></svg></div><h3>生活に合う形を探す。<span>続け方の相談</span></h3><p>予定の立てやすさや、取り組みたいことを一緒に整理する想定です。頻度や通い方は、決めつけずに相談します。</p></div>
+   </div>
+   <p class="principle"><strong>この提案の約束</strong><span>効果や健康上の結果を保証しません。料金・所在地・営業時間・担当者の資格など、実在の事業情報は設定していません。</span></p>
+  </div>
+ </section>
+ <section class="section" id="first-visit" aria-labelledby="visit-title">
+  <div class="wrap">
+   <div class="section-head"><div><p class="eyebrow">はじめての方へ</p><h2 id="visit-title">最初の一歩を、<br>先に見ておこう。</h2></div><p>知らない場所に行く不安を少しでも減らすために。<br>初回の相談・体験の流れを、架空の案として紹介します。</p></div>
+   <ol class="process">
+    <li><span class="step-no" aria-hidden="true">01</span><h3>気になることを話す</h3><p>目的がはっきりしていなくても、不安や希望から整理します。話したくないことまで無理に話す必要はありません。</p><span class="caption">「まだ迷っている」も、相談の入口。</span></li>
+    <li><span class="step-no" aria-hidden="true">02</span><h3>内容を聞いて、試すか決める</h3><p>進め方の説明を聞き、疑問を確認する想定です。体験の内容は事前に相談し、わからないまま進めません。</p><span class="caption">説明を聞いてから、選ぶ。</span></li>
+    <li><span class="step-no" aria-hidden="true">03</span><h3>次の一歩を考える</h3><p>通い方や生活との相性を振り返ります。すぐに結論を出すのではなく、検討するための情報を整理する構想です。</p><span class="caption">持ち帰って考える余白も。</span></li>
+   </ol>
+  </div>
+ </section>
+ <section class="section white" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+   <div><p class="eyebrow">よくある不安</p><h2 id="faq-title">聞きにくいことも、<br>ここから。</h2><p class="micro" style="margin-top:20px">回答は架空のサービス方針案です。<br>実在の店舗の規約ではありません。</p></div>
+   <div class="faq-list">
+    <details><summary>運動の経験がなくても相談できますか？</summary><p>運動に慣れていない方を想定した構想です。経験の有無よりも、気になっていることから話を始める設計にしています。</p></details>
+    <details><summary>目的が決まっていなくても大丈夫ですか？</summary><p>「まず雰囲気を知りたい」「何ができるか聞きたい」でも相談の入口になる想定です。目的を急いで決める必要はありません。</p></details>
+    <details><summary>相談したら、入会しなければいけませんか？</summary><p>説明を聞いたうえで検討できる流れを提案しています。このページの相談デモには、入会・契約・予約の機能はありません。</p></details>
+    <details><summary>料金や持ち物はどこで確認できますか？</summary><p>架空サイトのため、料金や持ち物の確定情報はありません。実店舗に導入する際は、確認済みの情報と条件をこの場所に明記する想定です。</p></details>
+    <details><summary>身体の状態について相談できますか？</summary><p>このサイトは医療的な判断や健康相談を提供しません。運動の可否など、専門的な判断が必要な内容には対応していない架空の構想です。</p></details>
+   </div>
+  </div>
+ </section>
+ <section class="demo-section" id="consultation" aria-labelledby="demo-title">
+  <div class="wrap demo-grid">
+   <div><p class="eyebrow">送信しない、相談デモ</p><h2 id="demo-title" class="demo-title">今、気になることを<br>ひとつ選ぶ。</h2><p class="demo-caption">相談の入口を体験するためのデモです。<br>選ぶと、この画面に相談の要約を表示します。<br>名前・連絡先の入力、予約、送信はありません。</p><p class="micro" style="margin-top:20px">選択内容は保存されず、外部へ送信されません。</p></div>
+   <form class="demo-form" id="demo-form">
+    <fieldset><legend>まず話してみたいこと</legend>
+     <label class="goal-choice"><input type="radio" name="goal" value="start" checked>何から始めればいいか知りたい</label>
+     <label class="goal-choice"><input type="radio" name="goal" value="visit">相談・体験の流れを知りたい</label>
+     <label class="goal-choice"><input type="radio" name="goal" value="pace">生活に合う通い方を考えたい</label>
+    </fieldset>
+    <button class="button js-only" type="submit">相談内容をこの画面で確認 <span class="arrow" aria-hidden="true">→</span></button>
+    <p class="micro">実際の相談予約ではありません。入力内容の保存・通信・送信は行いません。</p>
+    <div class="demo-output" id="demo-output" role="status" aria-live="polite" aria-atomic="true"><strong>要約の表示例</strong><p>「何から始めればいいか知りたい」から、相談の入口を整理します。気になることを選んで確認すると、ここに要約が表示されます。</p></div>
+   </form>
+  </div>
+ </section>
+ <div class="closing"><div class="wrap"><div><h2>はじめる前から、寄り添う設計。</h2><p>このサイトとつながる、Threadsの投稿・運用提案も制作しています。</p></div><a href="#proposal-top" data-panel-link="proposal-panel">運用提案を見る ↗</a></div></div>
+</section>
+<section id="proposal-panel" aria-label="ポートフォリオ事例とThreads運用提案">
+ <section class="proposal-hero" id="proposal-top" aria-labelledby="proposal-title">
+  <div class="wrap">
+   <p class="eyebrow">自主制作事例 ／ サイト × Threads</p>
+   <div class="proposal-heading"><h1 id="proposal-title">読んで、少し安心する。<br><span>その先に、相談の入口を。</span></h1><p>架空のパーソナルジム「HABITO」のサイトと、Threads運用の一体型提案です。投稿で関心をつくり、サイトで内容を理解し、相談の入口を選ぶまでを設計しました。</p></div>
+   <div class="case-strip"><span><strong>制作範囲</strong>　サイト・投稿文・運用計画</span><span><strong>投稿例</strong>　10本</span><span><strong>試行期間案</strong>　14日間</span><span><strong>実施状況</strong>　未運用・実績なし</span></div>
+  </div>
+ </section>
+ <section class="section white" id="strategy" aria-labelledby="strategy-title">
+  <div class="wrap">
+   <div class="section-head"><div><p class="eyebrow">考え方</p><h2 id="strategy-title">「頑張れ」より、<br>「何が気になる？」。</h2></div><p>いきなり申込みを促すのではなく、不安を言葉にできる接点をつくる。投稿とサイトで、同じ距離感を保つ提案です。</p></div>
+   <div class="strategy-grid">
+    <div class="strategy-item"><h3>届けたい相手</h3><p>運動を始めたい気持ちはあるけれど、ジムの雰囲気や初回の流れがわからず、ためらっている初心者。目的がまだ言葉になっていない人も含みます。</p></div>
+    <div class="strategy-item"><h3>目的と導線</h3><p>投稿で気になることを見つけ、サイトでサービス構想や初回の流れを理解し、相談の入口を選べる状態へ。この作品では、実予約ではなく相談デモまでを扱います。</p></div>
+    <div class="strategy-item"><h3>話し方の基準</h3><p>短く、穏やかに、決めつけない。返信を強要しない。架空の体験談、顧客の成果、医療・健康効果の主張、身体への評価、過度な勧誘は使いません。</p></div>
+    <div class="strategy-item"><h3>内容の柱</h3><p>不安の言語化、流れの見える化、対話のきっかけ、次の一歩の案内。投稿の目的を分け、同じ相談誘導だけが続かないようにします。</p><div class="pillars"><span>共感</span><span>理解</span><span>対話</span><span>相談導線</span></div></div>
+   </div>
+   <div class="flow-map" aria-label="投稿から相談への導線"><div><strong>Threadsで、気になる</strong><p>身近な不安と、答えやすい問い。</p></div><span class="flow-arrow" aria-hidden="true">→</span><div><strong>サイトで、理解する</strong><p>できること・初回の流れ・よくある不安。</p></div><span class="flow-arrow" aria-hidden="true">→</span><div><strong>相談の入口を選ぶ</strong><p>この作品では、送信しない相談デモ。</p></div></div>
+  </div>
+ </section>
+ <section class="section" id="posts" aria-labelledby="posts-title">
+  <div class="wrap">
+   <div class="section-head"><div><p class="eyebrow">Threads 投稿例</p><h2 id="posts-title">小さな接点を、10本。</h2></div><p>すべてオリジナルの投稿文案です。架空ブランドの提案であり、投稿済みの内容ではありません。コピー対象は本文のみです。</p></div>
+   <div class="filters js-only" role="group" aria-label="投稿の目的で絞り込む"><button type="button" data-filter="all" aria-pressed="true">すべて</button><button type="button" data-filter="共感" aria-pressed="false">共感</button><button type="button" data-filter="理解" aria-pressed="false">理解</button><button type="button" data-filter="対話" aria-pressed="false">対話</button><button type="button" data-filter="相談導線" aria-pressed="false">相談導線</button><button class="reset" type="button" id="reset-filter">絞り込みを解除</button></div>
+   <p class="post-count" id="post-count" role="status" aria-live="polite">10本の投稿文を表示</p>
+   <div class="post-list">
+    <article class="post" id="post-1" data-purpose="共感"><div class="post-head"><span class="post-number" aria-hidden="true">01</span><h3><span class="sr-only">投稿1：</span>迷っている、そのままで</h3><span class="purpose">共感</span></div><p class="post-text">「ジムが気になる」と「まだちょっと怖い」は、同時にあっていい。
+
+何を着ればいい？ 何をするんだろう？
+始める前に知りたいことがあるのは、自然なこと。
+
+ハビトは、その疑問から話せる場所を考えています。
+まずは、初回の流れを読むだけでも。</p><p class="post-notes">サイトの行き先：<a href="#first-visit" data-panel-link="site-panel">はじめての方へ</a>。プロフィールのサイト入口から初回の流れへ案内する想定。</p><div class="post-bottom"><span>配信案：1日目</span><button class="copy-button js-only" type="button" data-copy="post-1" aria-label="投稿1の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-2" data-purpose="理解"><div class="post-head"><span class="post-number" aria-hidden="true">02</span><h3><span class="sr-only">投稿2：</span>最初は、話すところから</h3><span class="purpose">理解</span></div><p class="post-text">最初の相談で、立派な目標を言わなくても大丈夫。
+
+「何ができるか知りたい」
+「運動の経験がほとんどない」
+「通えるかどうか、まだわからない」
+
+ハビトの構想では、まず希望と疑問を整理します。
+いきなり始める前に、進め方を知る時間を。</p><p class="post-notes">サイトの行き先：<a href="#services" data-panel-link="site-panel">できること</a>。最初の相談の位置づけを確認できる導線。</p><div class="post-bottom"><span>配信案：2日目</span><button class="copy-button js-only" type="button" data-copy="post-2" aria-label="投稿2の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-3" data-purpose="対話"><div class="post-head"><span class="post-number" aria-hidden="true">03</span><h3><span class="sr-only">投稿3：</span>先に知りたいのは？</h3><span class="purpose">対話</span></div><p class="post-text">初めてのジム。行く前に、どれがわかると少し安心できそうですか？
+
+当日の流れ。
+どんなことを相談できるか。
+体験を決めるまでの進め方。
+
+ほかのことでも大丈夫です。
+ハビトの案内を考えるために、気になることを聞かせてもらえたら。読むだけでも、もちろん。</p><p class="post-notes">サイトの行き先：<a href="#faq" data-panel-link="site-panel">よくある不安</a>。返信から案内の不足を検討する想定。個人的な健康情報は尋ねない。</p><div class="post-bottom"><span>配信案：3日目</span><button class="copy-button js-only" type="button" data-copy="post-3" aria-label="投稿3の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-4" data-purpose="理解"><div class="post-head"><span class="post-number" aria-hidden="true">04</span><h3><span class="sr-only">投稿4：</span>初回を、見える形に</h3><span class="purpose">理解</span></div><p class="post-text">初めての場所は、「何が起きるかわからない」が気になりますよね。
+
+ハビトが考える初回の流れは、
+気になることを話す → 内容を聞いて試すか決める → 次の一歩を考える。
+
+相談から、すぐ入会へ飛ばない設計です。
+詳しい流れは、サイトの「はじめての方へ」にまとめました。</p><p class="post-notes">サイトの行き先：<a href="#first-visit" data-panel-link="site-panel">はじめての方へ</a>。3段階の順序と、検討する余白を説明。</p><div class="post-bottom"><span>配信案：5日目</span><button class="copy-button js-only" type="button" data-copy="post-4" aria-label="投稿4の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-5" data-purpose="共感"><div class="post-head"><span class="post-number" aria-hidden="true">05</span><h3><span class="sr-only">投稿5：</span>比べなくていい入口</h3><span class="purpose">共感</span></div><p class="post-text">誰かの「週に何回」より、まずは自分の予定を見てみる。
+
+仕事の日。家で過ごしたい日。
+先の予定が、まだ決めにくい時期もある。
+
+ハビトでは、生活との相性を話せる相談を考えています。
+通い方を決める前に、気になることを整理するところから。</p><p class="post-notes">サイトの行き先：<a href="#services" data-panel-link="site-panel">できること</a>。続け方の相談という構想を伝える。</p><div class="post-bottom"><span>配信案：6日目</span><button class="copy-button js-only" type="button" data-copy="post-5" aria-label="投稿5の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-6" data-purpose="相談導線"><div class="post-head"><span class="post-number" aria-hidden="true">06</span><h3><span class="sr-only">投稿6：</span>予約の前に、試せる入口</h3><span class="purpose">相談導線</span></div><p class="post-text">相談って、何を話すんだろう。
+そんなときは、ハビトのサイトで入口だけ試してみてください。
+
+「何から始めればいいか」
+「相談・体験の流れ」
+「生活に合う通い方」
+
+気になることを選ぶと、この画面に要約を表示します。
+名前も連絡先も不要。送信しない、相談デモです。</p><p class="post-notes">サイトの行き先：<a href="#consultation" data-panel-link="site-panel">送信しない相談デモ</a>。実予約と誤認させず、相談の入口を体験する案内。</p><div class="post-bottom"><span>配信案：8日目</span><button class="copy-button js-only" type="button" data-copy="post-6" aria-label="投稿6の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-7" data-purpose="理解"><div class="post-head"><span class="post-number" aria-hidden="true">07</span><h3><span class="sr-only">投稿7：</span>決める前に、確認する</h3><span class="purpose">理解</span></div><p class="post-text">相談することと、入会を決めることは、別の一歩。
+
+説明を聞いて、気になることを確認してから考える。
+ハビトは、そんな流れを提案しています。
+
+このサイトは架空の制作例なので、契約も予約もできません。
+「よくある不安」で、相談の考え方を見てみてください。</p><p class="post-notes">サイトの行き先：<a href="#faq" data-panel-link="site-panel">よくある不安</a>。相談と入会の違い、および作品の範囲を明示。</p><div class="post-bottom"><span>配信案：9日目</span><button class="copy-button js-only" type="button" data-copy="post-7" aria-label="投稿7の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-8" data-purpose="対話"><div class="post-head"><span class="post-number" aria-hidden="true">08</span><h3><span class="sr-only">投稿8：</span>案内に、足したい言葉</h3><span class="purpose">対話</span></div><p class="post-text">「初心者向け」と書いてあっても、それだけではわからないことがあります。
+
+初回の流れが見えること。
+質問できる場面がわかること。
+決める前に考える時間があること。
+
+あなたなら、案内にどんな言葉を足したいですか？
+答えを急がず、気になることから。</p><p class="post-notes">サイトの行き先：<a href="#first-visit" data-panel-link="site-panel">はじめての方へ</a>。返信を案内文の改善候補として整理する想定。</p><div class="post-bottom"><span>配信案：10日目</span><button class="copy-button js-only" type="button" data-copy="post-8" aria-label="投稿8の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-9" data-purpose="共感"><div class="post-head"><span class="post-number" aria-hidden="true">09</span><h3><span class="sr-only">投稿9：</span>読むだけの一歩も</h3><span class="purpose">共感</span></div><p class="post-text">今日は、決めなくてもいい。
+
+ジムのサイトを開いて、できることをひとつ読む。
+気になった質問を、ひとつ見てみる。
+
+それくらいの入口も、あっていいと思います。
+ハビトの案内は、まだ迷っている人にも届く言葉でつくりました。</p><p class="post-notes">サイトの行き先：<a href="#services" data-panel-link="site-panel">できること</a>。行動を強要せず、サービスの理解につなげる。</p><div class="post-bottom"><span>配信案：12日目</span><button class="copy-button js-only" type="button" data-copy="post-9" aria-label="投稿9の本文をコピー">本文をコピー</button></div></article>
+    <article class="post" id="post-10" data-purpose="相談導線"><div class="post-head"><span class="post-number" aria-hidden="true">10</span><h3><span class="sr-only">投稿10：</span>自分の言葉で、選ぶ</h3><span class="purpose">相談導線</span></div><p class="post-text">「始めたい」まで、気持ちが決まっていなくても。
+「少し知りたい」から、選べる入口を。
+
+ハビトの相談デモでは、話してみたいことをひとつ選べます。
+選んだ内容は、画面に表示するだけ。保存も送信もしません。
+
+プロフィールのサイト入口から、気になることを確かめてみてください。</p><p class="post-notes">サイトの行き先：<a href="#consultation" data-panel-link="site-panel">送信しない相談デモ</a>。理解から相談の入口への移動を確認するための投稿案。</p><div class="post-bottom"><span>配信案：13日目</span><button class="copy-button js-only" type="button" data-copy="post-10" aria-label="投稿10の本文をコピー">本文をコピー</button></div></article>
+   </div>
+   <p id="copy-status" class="copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+   <div class="manual-copy" id="manual-copy" hidden><label for="copy-text">自動コピーできない場合は、本文を選択してコピーしてください。</label><textarea id="copy-text" readonly></textarea><button class="copy-button" type="button" id="close-copy">手動コピー欄を閉じる</button></div>
+  </div>
+ </section>
+ <section class="section white" id="calendar" aria-labelledby="calendar-title">
+  <div class="wrap">
+   <div class="section-head"><div><p class="eyebrow">2週間の運用案</p><h2 id="calendar-title">出す日と、<br>見直す日をつくる。</h2></div><p>14日間で10本を投稿し、4日は振り返り・休止に。開始日や投稿時刻は未設定です。実際の運用環境を確認してから決める提案です。</p></div>
+   <div class="calendar" aria-label="14日間の投稿と見直しの予定">
+    <div class="day" data-day="1" data-post="1"><span class="day-label">1日目 ／ 投稿</span><a href="#post-1" data-post-link="post-1" aria-label="1日目の投稿1を見る">01 ↗</a><strong>共感から始める</strong><p>迷っている気持ちを言葉に。</p></div>
+    <div class="day" data-day="2" data-post="2"><span class="day-label">2日目 ／ 投稿</span><a href="#post-2" data-post-link="post-2" aria-label="2日目の投稿2を見る">02 ↗</a><strong>相談の内容を紹介</strong><p>最初に話すことを見せる。</p></div>
+    <div class="day" data-day="3" data-post="3"><span class="day-label">3日目 ／ 投稿</span><a href="#post-3" data-post-link="post-3" aria-label="3日目の投稿3を見る">03 ↗</a><strong>知りたいことを聞く</strong><p>返信は任意。個人情報は求めない。</p></div>
+    <div class="day rest" data-day="4"><span class="day-label">4日目 ／ 見直し</span><strong>問いと反応を確認</strong><p>返信の内容を整理。必要なら案内文の候補を見直す。</p></div>
+    <div class="day" data-day="5" data-post="4"><span class="day-label">5日目 ／ 投稿</span><a href="#post-4" data-post-link="post-4" aria-label="5日目の投稿4を見る">04 ↗</a><strong>初回の流れを案内</strong><p>サイトで詳しく読める入口。</p></div>
+    <div class="day" data-day="6" data-post="5"><span class="day-label">6日目 ／ 投稿</span><a href="#post-5" data-post-link="post-5" aria-label="6日目の投稿5を見る">05 ↗</a><strong>生活との相性に触れる</strong><p>通い方を決めつけない。</p></div>
+    <div class="day rest" data-day="7"><span class="day-label">7日目 ／ 休止・整理</span><strong>1週目を振り返る</strong><p>返信とサイトへの移動を別々に見る。投稿は休む。</p></div>
+    <div class="day" data-day="8" data-post="6"><span class="day-label">8日目 ／ 投稿</span><a href="#post-6" data-post-link="post-6" aria-label="8日目の投稿6を見る">06 ↗</a><strong>相談デモを紹介</strong><p>送信しない体験だと明示。</p></div>
+    <div class="day" data-day="9" data-post="7"><span class="day-label">9日目 ／ 投稿</span><a href="#post-7" data-post-link="post-7" aria-label="9日目の投稿7を見る">07 ↗</a><strong>検討する余白を伝える</strong><p>相談と入会を分けて説明。</p></div>
+    <div class="day" data-day="10" data-post="8"><span class="day-label">10日目 ／ 投稿</span><a href="#post-8" data-post-link="post-8" aria-label="10日目の投稿8を見る">08 ↗</a><strong>案内への疑問を聞く</strong><p>言葉の改善につなげる。</p></div>
+    <div class="day rest" data-day="11"><span class="day-label">11日目 ／ 見直し</span><strong>導線を点検する</strong><p>投稿と行き先の内容が一致しているか確認。</p></div>
+    <div class="day" data-day="12" data-post="9"><span class="day-label">12日目 ／ 投稿</span><a href="#post-9" data-post-link="post-9" aria-label="12日目の投稿9を見る">09 ↗</a><strong>読むだけでもいい</strong><p>理解への入口を再案内。</p></div>
+    <div class="day" data-day="13" data-post="10"><span class="day-label">13日目 ／ 投稿</span><a href="#post-10" data-post-link="post-10" aria-label="13日目の投稿10を見る">10 ↗</a><strong>相談の入口へ案内</strong><p>デモの範囲をもう一度明示。</p></div>
+    <div class="day rest" data-day="14"><span class="day-label">14日目 ／ 振り返り</span><strong>次の仮説をひとつ</strong><p>反応と会話を確認し、次期間に試す変更を絞る。</p></div>
+   </div>
+   <p class="calendar-note">投稿文は上記10本に対応。見直し日は新規投稿を追加しません。返信対応は無理のない範囲で行う想定で、即時返信や反応の獲得を約束するものではありません。</p>
+  </div>
+ </section>
+ <section class="section" id="measurement" aria-labelledby="measurement-title">
+  <div class="wrap">
+   <div class="section-head"><div><p class="eyebrow">見ること・変えること</p><h2 id="measurement-title">数字だけで、<br>「届いた」と決めない。</h2></div><p>以下は計測の設計案です。実測値、目標の達成率、成果の予測は掲載していません。このページに解析・追跡の機能はありません。</p></div>
+   <table class="metrics"><caption class="sr-only">運用時に確認する指標と、次の見直し方の案</caption><thead><tr><th scope="col">見る項目</th><th scope="col">確認の方法・定義</th><th scope="col">次の見直し</th></tr></thead><tbody>
+    <tr><td>投稿への反応</td><td data-label="確認方法">利用環境で取得できる表示数・いいね・返信などを項目別に記録。各投稿の公開後、同じ経過時間で比較する設計案。</td><td data-label="見直し">投稿の目的ごとに比較。数字の大小だけで、相談への関心が高いと断定しない。</td></tr>
+    <tr><td>サイトへのクリック</td><td data-label="確認方法">将来の実装で、計測可能なリンクのクリック回数とサイト到達を区別。プロフィール経由など、投稿別に帰属できない移動は分けて扱う。</td><td data-label="見直し">投稿の案内文と着地点が一致するか点検。いいねの数をクリックの代わりに使わない。</td></tr>
+    <tr><td>会話の内容</td><td data-label="確認方法">返信のうち、初回の流れやサービス内容への質問を整理。件数だけでなく、繰り返される疑問を確認する。個人情報は集めない。</td><td data-label="見直し">答えが足りない箇所をFAQや投稿案に反映。少数の返信を、すべての人の意見とみなさない。</td></tr>
+    <tr><td>相談への移動</td><td data-label="確認方法">実店舗に導入するなら、相談入口のクリックと実際の相談を別に定義。本作品ではデモのため、予約や相談件数を成果として計上しない。</td><td data-label="見直し">不安の解消に必要な情報を見直す。医療的な内容には踏み込まず、結果を保証しない。</td></tr>
+   </tbody></table>
+   <p class="metrics-note">取得できる指標は、導入時の仕様と権限を確認して決めます。4日目・7日目・11日目・14日目に振り返り、次期間は問いの表現や案内先など一つの変更から試す案です。反応、クリック、会話、相談は異なる段階として扱い、因果関係や集客成果を保証しません。</p>
+  </div>
+ </section>
+ <div class="closing"><div class="wrap"><div><h2>投稿の先まで、同じ言葉で。</h2><p>運用提案の着地点を、架空サイトの相談デモで確かめられます。</p></div><a href="#consultation" data-panel-link="site-panel">サイトの相談デモを見る ↗</a></div></div>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="footer-row"><span class="footer-brand">HABITO.</span><span class="footer-credit">AMATERASU DESIGN 自主制作</span><a class="back-link" href="index.html">ポートフォリオへ戻る ↗</a></div><p class="micro">HABITO／ハビトは架空の提案名称です。実在のジム・サービスではありません。掲載内容はサービス構想・投稿文案・運用計画であり、営業案内や実績ではありません。相談デモは保存・送信・予約を行いません。</p></div></footer>
+<script>
+(function(){
+ 'use strict';
+ const panels={site:document.getElementById('site-panel'),proposal:document.getElementById('proposal-panel')};
+ const toggles={site:document.getElementById('show-site'),proposal:document.getElementById('show-proposal')};
+ const posts=Array.from(document.querySelectorAll('.post'));
+ const filterButtons=Array.from(document.querySelectorAll('[data-filter]'));
+ const status=document.getElementById('copy-status');
+ let copyTrigger=null;
+ function switchPanel(name,move){
+  Object.keys(panels).forEach(function(key){panels[key].hidden=key!==name;toggles[key].setAttribute('aria-pressed',String(key===name));});
+  if(move){const heading=panels[name].querySelector('h1');heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}
+ }
+ function filterPosts(value){
+  let count=0;
+  posts.forEach(function(post){const show=value==='all'||post.dataset.purpose===value;post.hidden=!show;if(show)count++;});
+  filterButtons.forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.filter===value));});
+  document.getElementById('post-count').textContent=count+'本の投稿文を表示'+(value==='all'?'':'（'+value+'）');
+ }
+ function showTarget(hash,focus){
+  let id;try{id=decodeURIComponent(hash.replace(/^#/,''));}catch(error){return;}
+  if(!id)return;
+  const target=document.getElementById(id);if(!target)return;
+  if(panels.proposal.contains(target)){switchPanel('proposal',false);if(target.classList.contains('post'))filterPosts('all');}
+  else if(panels.site.contains(target)){switchPanel('site',false);}
+  if(focus){target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ }
+ toggles.site.addEventListener('click',function(){switchPanel('site',true);history.replaceState(null,'','#site-top');});
+ toggles.proposal.addEventListener('click',function(){switchPanel('proposal',true);history.replaceState(null,'','#proposal-top');});
+ document.querySelectorAll('[data-panel-link],[data-post-link]').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();if(link.dataset.postLink)filterPosts('all');const hash=link.getAttribute('href');showTarget(hash,true);history.replaceState(null,'',hash);});});
+ window.addEventListener('hashchange',function(){showTarget(location.hash,true);});
+ filterButtons.forEach(function(button){button.addEventListener('click',function(){filterPosts(button.dataset.filter);});});
+ document.getElementById('reset-filter').addEventListener('click',function(){filterPosts('all');});
+ const summaries={
+  start:{title:'何から始めればいいか知りたい',text:'運動の経験や、気になっていることから相談を始める想定です。まず「できること」を読んで、知りたいことを整理してみてください。'},
+  visit:{title:'相談・体験の流れを知りたい',text:'話す → 内容を聞いて試すか決める → 次の一歩を考える、という構想です。「はじめての方へ」で、それぞれの段階を確認できます。'},
+  pace:{title:'生活に合う通い方を考えたい',text:'予定の立てやすさや、希望する関わり方を整理する相談を想定しています。通う頻度や契約条件は、この作品では設定していません。'}
+ };
+ document.getElementById('demo-form').addEventListener('submit',function(event){
+  event.preventDefault();const checked=document.querySelector('input[name="goal"]:checked');if(!checked)return;
+  const selected=summaries[checked.value];if(!selected)return;
+  const output=document.getElementById('demo-output');output.replaceChildren();
+  const title=document.createElement('strong');title.textContent='相談の要約：'+selected.title;
+  const text=document.createElement('p');text.textContent=selected.text;
+  const note=document.createElement('p');note.textContent='デモの表示のみです。予約・保存・送信は行っていません。';
+  output.append(title,text,note);
+ });
+ function legacyCopy(text){
+  const helper=document.createElement('textarea');helper.value=text;helper.setAttribute('readonly','');helper.setAttribute('aria-label','コピー用の投稿本文');helper.style.cssText='position:fixed;left:-10000px;top:0;';document.body.appendChild(helper);
+  let copied=false;try{helper.select();copied=typeof document.execCommand==='function'&&document.execCommand('copy');}catch(error){copied=false;}finally{helper.remove();}
+  return copied;
+ }
+ document.querySelectorAll('[data-copy]').forEach(function(button){button.addEventListener('click',async function(){
+  const post=document.getElementById(button.dataset.copy);const text=post.querySelector('.post-text').textContent.trim();const number=post.id.replace('post-','');
+  copyTrigger=button;button.disabled=true;status.textContent='投稿'+number+'の本文をコピーしています。';
+  document.getElementById('manual-copy').hidden=true;
+  let copied=false;
+  try{if(navigator.clipboard&&typeof navigator.clipboard.writeText==='function'){await navigator.clipboard.writeText(text);copied=true;}}catch(error){copied=false;}
+  if(!copied)copied=legacyCopy(text);
+  button.disabled=false;
+  if(copied){status.textContent='投稿'+number+'の本文をコピーしました。';button.focus({preventScroll:true});}
+  else{document.getElementById('copy-text').value=text;document.getElementById('manual-copy').hidden=false;status.textContent='自動コピーが使えません。手動コピー欄の本文を選択してください。';document.getElementById('copy-text').focus();document.getElementById('copy-text').select();}
+ });});
+ document.getElementById('close-copy').addEventListener('click',function(){document.getElementById('manual-copy').hidden=true;status.textContent='手動コピー欄を閉じました。';if(copyTrigger)copyTrigger.focus({preventScroll:true});});
+ document.documentElement.classList.add('js-ready');
+ switchPanel('site',false);showTarget(location.hash,false);
+})();
+</script>
+</body>
+</html>
