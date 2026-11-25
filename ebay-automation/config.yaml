@@ -1,0 +1,105 @@
+# ===== ビジネスロジック設定（運用前に調整）=====
+target:
+  min_price_usd: 300          # 対象価格帯（売価USD下限）
+  item_location_country: JP   # Browse API の発送元フィルタ
+
+profit:
+  fee_rate: 0.17              # r_fee: eBay手数料 + 海外決済手数料 + 広告費率
+  exchange_rate: 150.0        # E_rate: スプレッド考慮後の実効為替レート (JPY/USD)
+  min_profit_jpy: 15000       # 最低純利益（円）
+  min_profit_rate: 0.20       # 最低利益率（売上JPY比）
+  # 基準判定: "or" = どちらか満たせばOK / "and" = 両方必要
+  criteria_mode: or
+  # 仕入れ上限算出時、ライバル最安値から何%引いて売価を想定するか
+  undercut_rate: 0.02
+
+research:
+  lookback_days: 90           # 直近何日の落札データを見るか
+  min_sold_count: 2           # 「複数回売れている」とみなす回数
+  # ライバル最安値の算出時、落札中央値 × この比率 未満の出品は外れ値（ジャンク・付属品のみ等）として除外
+  rival_outlier_ratio: 0.5
+
+# 国際送料テーブル（容積重量 kg 上限 → 送料 JPY）
+# 容積重量 = 縦 x 横 x 高さ(cm) / divisor。実重量と大きい方を採用
+shipping:
+  carrier: FedEx
+  volumetric_divisor: 5000
+  table:
+    - {max_kg: 0.5, cost_jpy: 3200}
+    - {max_kg: 1.0, cost_jpy: 4200}
+    - {max_kg: 2.0, cost_jpy: 5800}
+    - {max_kg: 3.0, cost_jpy: 7400}
+    - {max_kg: 5.0, cost_jpy: 10500}
+    - {max_kg: 10.0, cost_jpy: 17800}
+  default_kg: 1.5             # 重量未入力時の仮定
+
+listing:
+  title_max_len: 80
+  default_category_id: "31388"   # Digital Cameras（ジャンルに合わせて変更）
+  default_quantity: 1
+  currency: USD
+
+monitor:
+  # 仕入れ元ページにこれらの文字列があれば「売切れ」と判定
+  soldout_keywords: ["売り切れ", "SOLD OUT", "在庫なし", "販売終了", "sold out", "売却済み"]
+  request_timeout_sec: 15
+  request_interval_sec: 3      # 仕入れ元サイトへの負荷配慮
+
+# 和英変換辞書（タイトル・説明文生成用。ジャンルに合わせて追加）
+glossary:
+  キズなし: No Scratches
+  傷なし: No Scratches
+  カビなし: No Fungus
+  クモリなし: No Haze
+  傷あり: Some Scratches
+  キズあり: Some Scratches
+  小スレあり: Minor Scuffs
+  スレあり: Scuffs
+  保証書あり: Warranty Card Included
+  保証書: Warranty Card
+  付属品完備: Complete Accessories
+  ニコン: Nikon
+  キヤノン: Canon
+  富士フイルム: Fujifilm
+  ソニー: Sony
+  ライカ: Leica
+  セイコー: Seiko
+  グランドセイコー: Grand Seiko
+  シマノ: Shimano
+  ダイワ: Daiwa
+  シルバー: Silver
+  ブラック: Black
+  美品: Excellent
+  極美品: Near Mint
+  新品: Brand New
+  未使用: Unused
+  中古: Used
+  動作確認済み: Tested and Working
+  動作品: Working
+  ジャンク: For Parts
+  付属品: Accessories
+  元箱: Original Box
+  箱付き: With Box
+  説明書: Manual
+  レンズ: Lens
+  ボディ: Body
+  カメラ: Camera
+  腕時計: Watch
+  自動巻き: Automatic
+  クォーツ: Quartz
+  釣り具: Fishing
+  リール: Reel
+  ロッド: Rod
+  キャップ: Cap
+  ストラップ: Strap
+  バッテリー: Battery
+  充電器: Charger
+  ケース: Case
+  カビ: Fungus
+  クモリ: Haze
+  キズ: Scratches
+  傷: Scratches
+  スレ: Scuffs
+  なし: None
+  あり: Present
+  小: Minor

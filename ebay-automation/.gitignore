@@ -1,0 +1,13 @@
+.env
+*.db
+*.db-journal
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+data/output/
+data/.token_cache.json
+# 実データ（仕入れ・リサーチ情報）はコミットしない。サンプルは make_sample_data.py で再生成
+data/research_csv/*.csv
+data/candidates/*.csv
+data/mock_*.json
